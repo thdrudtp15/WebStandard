@@ -10,7 +10,7 @@ function Banner() {
     //자동으로 다이렉트 버튼과 슬라이드박스의 크기가 늘어납니다.
     //조금 더 간편한 이미지 유지보수를 위해 해당 방법으로 제작했습니다.
     //==============================
-    let [imgArr,setImgArr] = useState([1,2]);
+    let [imgArr,setImgArr] = useState([1,2,3,4,5,6,7]);
     let [nowPage, setNowPage]  = useState(0);
    
     useEffect(()=>{

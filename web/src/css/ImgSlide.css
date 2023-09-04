@@ -74,13 +74,15 @@
 
 
 .slider-directBtn{
-    height: 3px;
+    height: 7px;
     width: 40px;
     display: inline-block;
     margin:  0 5px;
     background: #eee;
     cursor: pointer;
+    transition: all 0.7s;
 }
 .directBtn-select {
+    width: 70px;
     background: gray;
 }
