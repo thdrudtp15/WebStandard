@@ -140,7 +140,10 @@
     }
 }
 @media screen and (max-width : 768px) {
-    
+    .tab-content {
+        padding: 30px 2px 40px 2px;
+        height:  300px;
+    }
 }
 @media screen and (max-width : 576px) {
 

@@ -128,6 +128,17 @@
     .slider-seqBtnBox{
         height: 75vh;
     }
+    .slider-imgTextBox{
+        top: 130px;
+        left: 150px;
+        width: 600px;
+    }
+    .slider-imgTextMain{
+        font-size: 65px;
+    }
+    .slider-imgTextSub{
+        font-size: 20px;
+    }
 }
 @media screen and (max-width : 992px) {
     .slider-container {
@@ -135,6 +146,17 @@
     }
     .slider-seqBtnBox{
         height: 65vh;
+    }
+    .slider-imgTextBox{
+        top: 100px;
+        left: 100px;
+        width: 430px;
+    }
+    .slider-imgTextMain{
+        font-size: 40px;
+    }
+    .slider-imgTextSub{
+        font-size: 15px;
     }
     
 }
@@ -147,8 +169,14 @@
     }
     .slider-imgTextBox{
         top: 100px;
-        left: 100px;
+        left: 60px;
         width: 430px;
+    }
+    .slider-imgTextMain{
+        font-size: 30px;
+    }
+    .slider-imgTextSub{
+        font-size: 20px;
     }
     
 }
