@@ -3,6 +3,12 @@ import React, { useEffect, useState } from "react";
 import "../css/ImgSlide.css"
 import {LiaLongArrowAltRightSolid} from "react-icons/lia";
 
+import city from "../Image/city.jpg";
+import light from "../Image/light.jpg";
+import beach from "../Image/beach.jpg";
+
+
+
 function Banner() {
 
     //==============================
@@ -10,7 +16,10 @@ function Banner() {
     //자동으로 다이렉트 버튼과 슬라이드박스의 크기가 늘어납니다.
     //조금 더 간편한 이미지 유지보수를 위해 해당 방법으로 제작했습니다.
     //==============================
-    let [imgArr,setImgArr] = useState([1,2,3,4,5,6,7]);
+    let [imgArr,setImgArr] = useState([{main : "TITLE", sub : "explanation explanation explanation explanation explanation explanation " ,image : city, },
+                                       {main : "큰 제목입니다2", sub : "설명입니다. 설명입니다. 설명입니다." , image : light},
+                                       {main : "큰 제목입니다3", sub : "설명입니다. 설명입니다. 설명입니다.", image : beach}
+                                    ]);
     let [nowPage, setNowPage]  = useState(0);
    
     useEffect(()=>{
@@ -42,10 +51,27 @@ function Banner() {
         //=======================================================
         if(nowPage >= 0 && nowPage < imgArr.length){
             let tag = document.querySelector("#slider-box");
-                if(tag instanceof HTMLElement){
-                tag.style.transform = `translateX(-${(100 / imgArr.length) * (nowPage)}%)`
-            }
+            let tbtag = document.querySelectorAll(".slider-imgTextBox");
 
+                if(tag instanceof HTMLElement && tbtag instanceof NodeList){
+                    
+                    tbtag.forEach((tag)=>{
+                        tag.classList.add("aa");
+                    })
+
+                 const STO =  setTimeout(()=>{
+                        let tag1 =tag as HTMLElement
+                        tag1.style.transform = `translateX(-${(100 / imgArr.length) * (nowPage)}%)`
+                        clearTimeout(STO)
+                    },400)
+                const STO2 = setTimeout(()=>{
+                    tbtag.forEach((tag)=>{
+                        tag.classList.remove("aa");
+                    })
+                    clearTimeout(STO2)
+                },800)  
+            }
+            
 
              //=======================================================
         // 원하는 슬라이드의 페이지로 이동하는 다이렉트 버튼의 스타일을 조정하는 부분입니다.
@@ -59,8 +85,9 @@ function Banner() {
                 const sltTag = drBtntags[nowPage];
                 sltTag.classList.add("directBtn-select");
             }
-
         } 
+
+        
     },[nowPage])
 
 
@@ -101,7 +128,17 @@ function Banner() {
                 <div className="slider-container">
                     <div className="slider-box" id="slider-box">
                         {imgArr.map((data,index)=>{
-                            return <div key={index} className="slider-image">{data}</div>
+                            return <div key={index} className="slider-image">
+                                        <div className="slider-imgTextBox">
+                                            <div className="slider-imgTextMain">
+                                                {data.main}
+                                            </div>
+                                            <div className="slider-imgTextSub">
+                                               {data.sub}
+                                            </div>
+                                        </div>                                   
+                                        <img alt="" src={data.image}></img>
+                                   </div>
                         })}
                     </div>
                     <div className="slider-directBtnBox">
