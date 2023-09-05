@@ -4,7 +4,7 @@ import "../css/ImgSlide.css"
 import {LiaLongArrowAltRightSolid} from "react-icons/lia";
 
 import city from "../Image/city.jpg";
-import light from "../Image/light.jpg";
+import space from "../Image/section1.jpg";
 import beach from "../Image/beach.jpg";
 
 
@@ -16,9 +16,9 @@ function Banner() {
     //자동으로 다이렉트 버튼과 슬라이드박스의 크기가 늘어납니다.
     //조금 더 간편한 이미지 유지보수를 위해 해당 방법으로 제작했습니다.
     //==============================
-    let [imgArr,setImgArr] = useState([{main : "TITLE", sub : "explanation explanation explanation explanation explanation explanation " ,image : city, },
-                                       {main : "큰 제목입니다2", sub : "설명입니다. 설명입니다. 설명입니다." , image : light},
-                                       {main : "큰 제목입니다3", sub : "설명입니다. 설명입니다. 설명입니다.", image : beach}
+    let [imgArr,setImgArr] = useState([ {main : "TITLE", sub : "explanation explanation explanation explanation explanation explanation " ,image : city, },
+                                        {main : "큰 제목입니다3", sub : "설명입니다. 설명입니다. 설명입니다.", image : space},                                   
+                                        {main : "큰 제목입니다3", sub : "설명입니다. 설명입니다. 설명입니다.", image : beach}
                                     ]);
     let [nowPage, setNowPage]  = useState(0);
    
