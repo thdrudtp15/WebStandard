@@ -9,9 +9,9 @@ function TabBtn(){
    
 
     const [catg,setCatg] = useState<{name : string, catg:string}[]>
-                                     ([{name : "1stTAB", catg : "자연"},
-                                     {name : "2ndTAB" , catg : "도시"},
-                                     {name :"3rdTAB" ,catg : "바다"}]);
+                                     ([{name : "TAB#1", catg : "자연"},
+                                     {name : "TAB#2" , catg : "도시"},
+                                     {name :"TAB#3" ,catg : "바다"}]);
 
     const [select , setSelect] = useState("자연");
     const [cut,setCut] = useState(3);

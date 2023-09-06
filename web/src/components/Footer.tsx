@@ -26,6 +26,7 @@ function Footer(){
                     }
             }
         }
+        
         window.addEventListener("scroll",scrollEvnt)
         return ()=>{window.removeEventListener("scroll",scrollEvnt)}
     },[])

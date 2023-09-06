@@ -17,6 +17,9 @@ function Navbar(){
                 {catgArr.map((data,index)=>{
                     return <NavCatg data={data}/>
                 })}
+                <div className="nav-catg">
+                    <span className="nav-catgText" >LOGIN</span>
+                </div>
             </div>
         </div>
 }
