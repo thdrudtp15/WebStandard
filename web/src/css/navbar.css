@@ -1,0 +1,77 @@
+
+
+.nav-wrap {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    height: 40px;
+    background: rgba(0,0,0,0.2);
+    z-index: 2;
+    color:white;
+    display: flex;
+}
+.nav-logoBox {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+
+}
+.nav-catgBox {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-catg{
+    min-width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 20px;
+    color: silver;    
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.nav-catgText {
+    color: silver;
+    text-decoration: none;
+}
+
+.nav-catg:hover .nav-catgText {
+    color:  white;
+}
+.nav-catg:hover .nav-dropdown{
+  display: block;
+}
+
+.nav-dropdown:hover {
+    font-size: 15px;
+    color: white;
+}
+
+
+
+
+.nav-dropdownBox {
+    width: 100%;
+    position: absolute;
+    top :100%;
+}
+.nav-dropdown {
+    max-width: 100%;
+    background: rgba(0,0,0,0.2); ;
+    display: none;
+    text-align: center;
+    padding: 15px 15px;
+    font-weight: 300;
+    font-size: 12px;
+}

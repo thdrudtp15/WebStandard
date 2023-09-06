@@ -60,13 +60,13 @@ function TabBtn(){
     }
 
     
-    return <div className="template-wrap">
+    return <div className="template-wrap" id="tab">
                 <div className="template-subject">TAB BUTTON</div>
                 <div className="template-contentBox">
                    
                     <div className="tab-btnBox">
                         {catg.map((data,index)=> 
-                        <div key={index} className="tab-btn" onClick={()=>{onChangeCatg(data.catg, index)}}>
+                        <div key={index} className={`tab-btn ${index === 0 && "tab-select"}`} onClick={()=>{onChangeCatg(data.catg, index)}}>
                             {data.name}
                         </div>)}
                     </div>
