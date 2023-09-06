@@ -29,12 +29,11 @@ export default Navbar;
 
 function NavCatg({data} : {data : {name : string , path : string , dropdownMenu : string[]}}){
     return <div className="nav-catg" >
-    <a href={`${data.path}`} className="nav-catgText">{data.name}</a>
-    <div className="nav-dropdownBox">
-        {data.dropdownMenu.map((menu,index)=>{
-             return <div key={index} className="nav-dropdown">{menu}</div>
-        })}
-
-    </div>
-</div>
+                 <a href={`${data.path}`} className="nav-catgText">{data.name}</a>
+                 <div className="nav-dropdownBox">
+                     {data.dropdownMenu.map((menu,index)=>{
+                         return <div key={index} className="nav-dropdown">{menu}</div>
+                        })}
+                 </div>
+           </div>
 }

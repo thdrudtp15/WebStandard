@@ -95,7 +95,7 @@
 .slider-directBtnBox{
     position: relative;
     bottom: 100px;
-    z-index: 20;
+    z-index: 10;
     width: 100%;
     height: 30px;
     display: flex;

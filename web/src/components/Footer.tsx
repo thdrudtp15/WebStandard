@@ -16,24 +16,34 @@ function Footer(){
 
             let percent = scroll / (height - view) * 100;
             
-            const tag = document.querySelector(".footer-wrap")
-            console.log(percent)
-                if(tag instanceof HTMLElement) {
+            const footerWrapTag = document.querySelector(".footer-wrap")
+            const navWrapTag = document.querySelector(".nav-wrap");
+
+                if(footerWrapTag instanceof HTMLElement && navWrapTag instanceof HTMLElement) {
+                    if(percent > 3) {
+                        navWrapTag.classList.add("nav-fold")
+                    }else{
+                        navWrapTag.classList.remove("nav-fold")
+                    }
+
                     if(percent > 90) {
-                        tag.classList.add("footer-expand");
+                        footerWrapTag.classList.add("footer-expand");
                     }else {
-                        tag.classList.remove("footer-expand");
+                        footerWrapTag.classList.remove("footer-expand");
                     }
             }
         }
-        
+
         window.addEventListener("scroll",scrollEvnt)
         return ()=>{window.removeEventListener("scroll",scrollEvnt)}
     },[])
 
-    return <div className="footer-wrap">
+    return <div>
+        <div style={{height : "200px"}}></div> 
+        <div className="footer-wrap">
             푸터 내용채우기 마지막에 해도 될듯
-    </div>
+        </div>
+        </div>
         
 }
 
