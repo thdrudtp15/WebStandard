@@ -4,7 +4,68 @@
 .login-wrap {
     width: 100%;
     height: 100vh;
-    background: rgba(0,0,0,0.8);
+    /* background: rgba(255, 255, 255, 0.8); */
     position: fixed;
     z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px)
+}
+
+.login-box{
+    width: 400px;
+    height: 420px;
+    border-radius: 5px;
+    background: rgba(26, 26, 26, 0.5);
+    padding: 0px 30px;
+}
+
+
+.login-inputBox{
+    margin: 10px 0px;
+}
+
+.login-inputBox input {
+    border: none;
+    border-radius: 3px;
+    height: 35px;
+    font-size: 17px;
+    width: 100%;
+    background: white;
+    box-sizing: border-box;
+    outline: none;
+    padding: 0px 15px;
+}
+
+
+.login-btn {
+    border: none;
+    border-radius: 3px;
+    height: 35px;
+    font-size: 17px;
+    width: 100%;
+    background: white;
+}
+
+.login-logoBox {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-logoBox img {
+    width: 100px;
+}
+
+.login-subjectBox {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    font-weight: 600;
+    color:white;
 }
