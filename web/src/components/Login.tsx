@@ -36,6 +36,9 @@ function Login(){
                             <input type="password" placeholder="비밀번호"/>
                         </div>
                         <button className="login-btn">로그인</button>
+                        <div>회원가입이나 비번찾기 등등</div>
+                        <div className="OR">OR</div>
+
                     </div>
             </div>
 }
