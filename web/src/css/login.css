@@ -31,7 +31,7 @@
 
 
 .login-inputBox{
-    margin: 10px 0px;
+    margin-bottom: 10px;
 }
 
 .login-inputBox input {
@@ -53,7 +53,10 @@
     height: 35px;
     font-size: 17px;
     width: 100%;
-    background: white;
+    background: black;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .login-logoBox {
@@ -112,4 +115,60 @@
     margin-left: 5px;
 }
 
+.login-slBox {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.login-slBtnBox {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}   
+
+.kakao {
+    background: transparent;
+}
+.kakao:hover {
+    background: yellow;
+    color: black;
+}
+.naver {
+    background: transparent;
+}
+.naver:hover {
+    background: green;
+}
+
+.google {
+    background: transparent;
+    font-size: 2.1rem;
+}
+.google:hover {
+    background: white;
+    color: black;
+}
+
+
+.login-joinAndFindBox {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.joinFindText {
+    cursor: pointer;
+}

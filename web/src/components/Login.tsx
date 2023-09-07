@@ -3,6 +3,8 @@ import React, { useState,useEffect } from 'react';
 import { useDispatch,useSelector } from "react-redux";
 import { onchangeLoginStatus } from "../store";
 
+import {SiKakao,} from "react-icons/si";
+import {FcGoogle} from "react-icons/fc";
 
 
 
@@ -26,9 +28,8 @@ function Login(){
     return <div className={`login-wrap ${loginStatus}`} onClick={(e)=>{로그인창닫기(e)}}>
                     <div className="login-box">
                         <div className="login-logoBox">
-                        
                         </div>
-                        <div className="login-subjectBox">로그인</div>
+                        <div className="login-subjectBox">LOGIN</div>
                         <div className="login-inputBox">
                             <input type="text" placeholder="아이디"/>
                         </div>
@@ -36,9 +37,17 @@ function Login(){
                             <input type="password" placeholder="비밀번호"/>
                         </div>
                         <button className="login-btn">로그인</button>
-                        <div>회원가입이나 비번찾기 등등</div>
+                        <div className="login-joinAndFindBox">
+                            <div>
+                                <span className="joinFindText">회원가입</span> 
+                                    &nbsp;&nbsp;&nbsp;
+                                <span className="joinFindText">ID/PW찾기</span></div>
+                        </div>
                         <div className="OR">OR</div>
-
+                        <div className="login-slBox">
+                            <div className="login-slBtnBox kakao"><SiKakao/></div>
+                            <div className="login-slBtnBox google"><FcGoogle/></div>
+                        </div>
                     </div>
             </div>
 }
