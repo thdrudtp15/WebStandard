@@ -8,6 +8,7 @@ import Section from './components/Section';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
+import ScrollEvent from './components/ScrollEvent';
 
 import sectionImg from "./Image/light.jpg";
 
@@ -22,6 +23,7 @@ function App() {
       <Section img={sectionImg} subject="SECTION TITLE" text="SECTION EXPLANATION" fontColor="white"/>
       <Hover />
       <Footer />
+      <ScrollEvent />
     </div>
   );
 }

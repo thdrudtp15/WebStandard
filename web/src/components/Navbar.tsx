@@ -1,11 +1,16 @@
 import "../css/navbar.css";
+import React,{useEffect} from "react"
+
 import { useDispatch,useSelector } from "react-redux";
 import { onchangeLoginStatus } from "../store";
+
+
 
 function Navbar(){
 
     const dispatch = useDispatch();
-
+    
+    
 
     const catgArr = [
         {name : "TAB" , path : "#tab" , dropdownMenu : ["TAB CONTENT1","TAB CONTENT2"]},
@@ -21,8 +26,8 @@ function Navbar(){
                 {catgArr.map((data,index)=>{
                     return <NavCatg data={data}/>
                 })}
-                <div className="nav-catg">
-                    <span className="nav-catgText" onClick={()=>{dispatch(onchangeLoginStatus("login-wrapActivate"))}} >LOGIN</span>
+                <div className="nav-catg" onClick={()=>{dispatch(onchangeLoginStatus("login-wrapActivate"))}}>
+                    <span className="nav-catgText" onClick={()=>{dispatch(onchangeLoginStatus("login-wrapActivate"))}}>LOGIN</span>
                 </div>
             </div>
         </div>
@@ -32,12 +37,12 @@ export default Navbar;
 
 
 function NavCatg({data} : {data : {name : string , path : string , dropdownMenu : string[]}}){
-    return <div className="nav-catg" >
-                 <a href={`${data.path}`} className="nav-catgText">{data.name}</a>
+    return <a className="nav-catg" href={`${data.path}`} >
+                 <span className="nav-catgText">{data.name}</span>
                  <div className="nav-dropdownBox">
                      {data.dropdownMenu.map((menu,index)=>{
                          return <div key={index} className="nav-dropdown">{menu}</div>
                         })}
                  </div>
-           </div>
+           </a>
 }

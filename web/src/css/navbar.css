@@ -38,6 +38,7 @@
     color: silver;    
     position: relative;
     cursor: pointer;
+    text-decoration: none;
 }
 
 
@@ -78,4 +79,31 @@
 }
 .nav-fold {
     transform: translateY(-100%);
+}
+
+
+@media screen and (max-width : 1200px) {
+    .nav-catgBox {
+       
+    }
+    .nav-catg {
+        min-width: 120px;
+        font-size: 12px;
+    }
+    .nav-dropdown{
+        font-size: 10px;
+    }
+    .nav-dropdown:hover {
+        font-size: 10px;
+        color: white;
+    }
+}
+@media screen and (max-width : 992px) {
+}   
+@media screen and (max-width : 768px) {
+     .nav-catgBox {
+        display: none;
+    }
+}  
+@media screen and (max-width : 576px) {   
 }
