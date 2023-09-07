@@ -4,7 +4,7 @@ import React,{useEffect} from "react"
 import { useDispatch,useSelector } from "react-redux";
 import { onchangeLoginStatus } from "../store";
 
-
+import {HiBars3} from "react-icons/hi2";
 
 function Navbar(){
 
@@ -30,6 +30,9 @@ function Navbar(){
                     <span className="nav-catgText" onClick={()=>{dispatch(onchangeLoginStatus("login-wrapActivate"))}}>LOGIN</span>
                 </div>
             </div>
+            <div className="nav-flexableIcon" onClick={()=>{}}>
+                <HiBars3 />
+            </div>
         </div>
 }
 
@@ -46,3 +49,4 @@ function NavCatg({data} : {data : {name : string , path : string , dropdownMenu 
                  </div>
            </a>
 }
+
