@@ -1,7 +1,11 @@
 import "../css/navbar.css";
-
+import { useDispatch,useSelector } from "react-redux";
+import { onchangeLoginStatus } from "../store";
 
 function Navbar(){
+
+    const dispatch = useDispatch();
+
 
     const catgArr = [
         {name : "TAB" , path : "#tab" , dropdownMenu : ["TAB CONTENT1","TAB CONTENT2"]},
@@ -18,7 +22,7 @@ function Navbar(){
                     return <NavCatg data={data}/>
                 })}
                 <div className="nav-catg">
-                    <span className="nav-catgText" >LOGIN</span>
+                    <span className="nav-catgText" onClick={()=>{dispatch(onchangeLoginStatus("login-wrapActivate"))}} >LOGIN</span>
                 </div>
             </div>
         </div>

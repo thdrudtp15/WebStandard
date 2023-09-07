@@ -26,7 +26,7 @@ function Footer(){
                         navWrapTag.classList.remove("nav-fold")
                     }
 
-                    if(percent > 90) {
+                    if(percent > 97) {
                         footerWrapTag.classList.add("footer-expand");
                     }else {
                         footerWrapTag.classList.remove("footer-expand");
