@@ -55,7 +55,8 @@ function LoginComp({setMode,dispatch} : {setMode : (x:string) => void,dispatch :
     <div className="login-joinAndFindBox">
         <div>
             <span className="joinFindText" onClick={()=>{setMode("join")}}>회원가입</span> 
-            {/* <span className="joinFindText" onClick={()=>{setMode("find")}}>ID/PW찾기</span>] */}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span className="joinFindText" onClick={()=>{setMode("join")}}>ID/PW찾기</span>
             </div>
     </div>
     <div className="OR">OR</div>
@@ -210,7 +211,7 @@ function JoinComp({setMode,dispatch} : {setMode : (x:string) => void, dispatch :
                 <span className="안내메시지" style={{color : pwCheckMessage.color}}>{pwCheckMessage.message}</span>
             </div>
             <div className="login-inputBox">
-                <input placeholder="휴대폰 번호" type="text" onChange={(e)=>{onChangePhone(e)}} maxLength={11}/>
+                <input placeholder="휴대폰 번호" type="text" onChange={(e)=>{onChangePhone(e)}} maxLength={11} value={phone}/>
                 <span className="안내메시지" style={{color : phoneMessage.color}}>{phoneMessage.message}</span>
             </div>
             <div className="login-termsBox">

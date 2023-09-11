@@ -1,0 +1,26 @@
+
+
+.sb-wrap {
+    position: fixed;
+    width: 483px;
+    right: 0;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(3px);
+    z-index: 11;
+    transition: all 0.8s;
+    transform: translateX(100%);
+    padding: 30px 45px;
+}
+.sb-open {
+    transform: translateX(0%);
+}
+.sb-closeBtn{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: white;
+    height: 70px;
+    /* background: red; */
+    font-size: 1.3rem;
+}

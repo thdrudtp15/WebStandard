@@ -10,11 +10,24 @@ let loginStatus = createSlice({
   },
 });
 
+let sidebarStatus = createSlice({
+  name : "sidebarStatus",
+  initialState : "",
+  reducers : {
+    onChnageSidebarStatus(state,value){
+      return value.payload;
+    }
+  }
+})
+
+
 export default configureStore({
   reducer: {
     loginStatus: loginStatus.reducer,
+    sidebarStatus :sidebarStatus.reducer,
   },
 });
 
 
 export let {onchangeLoginStatus} = loginStatus.actions;
+export let {onChnageSidebarStatus} = sidebarStatus.actions;

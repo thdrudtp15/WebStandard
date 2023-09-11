@@ -34,9 +34,7 @@ const tabBtnData = [
     new Btn("도시 이미지의 간단한 설명",skycity,"도시"),
     new Btn("바다 이미지의 간단한 설명",sea1,"바다"),
     new Btn("바다 이미지의 간단한 설명",sea2,"바다"),
-    new Btn("바다 이미지의 간단한 설명",sea3,"바다"),
-    
-    
+    new Btn("바다 이미지의 간단한 설명",sea3,"바다"), 
 ]
 
 

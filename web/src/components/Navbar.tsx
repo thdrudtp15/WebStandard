@@ -3,6 +3,7 @@ import React,{useEffect} from "react"
 
 import { useDispatch,useSelector } from "react-redux";
 import { onchangeLoginStatus } from "../store";
+import { onChnageSidebarStatus } from "../store";
 
 import {HiBars3} from "react-icons/hi2";
 
@@ -30,7 +31,7 @@ function Navbar(){
                     <span className="nav-catgText" onClick={()=>{dispatch(onchangeLoginStatus("login-wrapActivate"))}}>LOGIN</span>
                 </div>
             </div>
-            <div className="nav-flexableIcon" onClick={()=>{}}>
+            <div className="nav-flexableIcon" onClick={()=>{dispatch(onChnageSidebarStatus("sb-open"))}}>
                 <HiBars3 />
             </div>
         </div>

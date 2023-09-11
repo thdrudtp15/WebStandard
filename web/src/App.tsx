@@ -11,6 +11,7 @@ import Login from './components/Login';
 import ScrollEvent from './components/ScrollEvent';
 
 import sectionImg from "./Image/light.jpg";
+import Sidebar from './components/Sidebar';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <div>
       <Login/>
       <Navbar />
+      <Sidebar/>
       <ImgSlide />
       <TabBtn/>
       <Section img={sectionImg} subject="SECTION TITLE" text="SECTION EXPLANATION" fontColor="white"/>
