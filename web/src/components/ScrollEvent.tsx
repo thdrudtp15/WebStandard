@@ -1,5 +1,6 @@
-
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
+import { onChnageSidebarStatus } from "../store";
 
 //==========================
 //해당 컴포넌트는 아무런 태그도 반환하지 않습니다.
@@ -8,6 +9,7 @@ import { useEffect } from "react";
 //생각하게 되었습니다.
 //==========================
 function ScrollEvent(){
+    const dispatch = useDispatch();
 
     useEffect(()=>{
             const footerWrapTag = document.querySelector(".footer-wrap")
@@ -17,7 +19,7 @@ function ScrollEvent(){
         function resizingEvent(){
             let width = document.body.offsetWidth;
             if(width <= 768 && navWrapTag instanceof HTMLElement){
-                navWrapTag.classList.remove("nav-fold")
+                navWrapTag.classList.remove("nav-fold")   
             }
         }
 

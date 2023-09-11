@@ -1,9 +1,10 @@
 import { useSelector,useDispatch } from "react-redux";
 import { onChnageSidebarStatus } from "../store";
-import {GrClose} from "react-icons/gr";
+import {PiArrowRightBold} from "react-icons/pi";
 import "../css/sidebar.css";
 
 function Sidebar(){
+    const dispatch = useDispatch();
     const sbStatus = useSelector((state : { sidebarStatus : string })=>{
         return state.sidebarStatus;
     })
@@ -11,7 +12,7 @@ function Sidebar(){
 
     return <div className={`sb-wrap ${sbStatus}`}>
                 <div className="sb-closeBtn">
-                    <div><GrClose /></div>
+                    <div onClick={()=>{dispatch(onChnageSidebarStatus(""))}}><PiArrowRightBold /></div>
                 </div>
             </div> 
 }
