@@ -21,7 +21,10 @@ function Banner() {
                                         {main : "큰 제목입니다3", sub : "설명입니다. 설명입니다. 설명입니다.", image : beach}
                                     ]);
     let [nowPage, setNowPage]  = useState(0);
-   
+    let [firstRendering , setFirstRendering] = useState(true);
+
+
+
     useEffect(()=>{
         //======================================
         //이미지 슬라이더의 크기를 결정하는 부분 
@@ -49,6 +52,7 @@ function Banner() {
         //=======================================================
         //nowPage State 값에 따라서 slider-box의 위치를 조정합니다.
         //=======================================================
+        if(!firstRendering){
         if(nowPage >= 0 && nowPage < imgArr.length){
             let tag = document.querySelector("#slider-box");
             let tbtag = document.querySelectorAll(".slider-imgTextBox");
@@ -86,8 +90,8 @@ function Banner() {
                 sltTag.classList.add("directBtn-select");
             }
         } 
-
-        
+    }
+    setFirstRendering(false);
     },[nowPage])
 
 
@@ -142,7 +146,7 @@ function Banner() {
                         })}
                     </div>
                     <div className="slider-directBtnBox">
-                        {imgArr.map((data,index)=> <div key={index} className="slider-directBtn" onClick={()=>{onChangeNowPageDr(index)}}></div>)}
+                        {imgArr.map((data,index)=> <div key={index} className={`slider-directBtn ${index === 0 && "directBtn-select"}`} onClick={()=>{onChangeNowPageDr(index)}}></div>)}
                     </div>
                 </div>
                 </div>
