@@ -55,8 +55,8 @@ function LoginComp({setMode,dispatch} : {setMode : (x:string) => void,dispatch :
     <div className="login-joinAndFindBox">
         <div>
             <span className="joinFindText" onClick={()=>{setMode("join")}}>회원가입</span> 
-                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-            <span className="joinFindText" onClick={()=>{setMode("find")}}>ID/PW찾기</span></div>
+            {/* <span className="joinFindText" onClick={()=>{setMode("find")}}>ID/PW찾기</span>] */}
+            </div>
     </div>
     <div className="OR">OR</div>
     <div className="login-slBox">
