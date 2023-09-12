@@ -15,6 +15,9 @@ function Sidebar(){
     const contentBox = document.querySelectorAll(".sb-catgContentBox");
     const arrow =document.querySelectorAll(".sb-catgArrow");
 
+
+
+
     function closeSidebar(){
         dispatch(onChnageSidebarStatus(""))
         if(contentBox instanceof NodeList && arrow instanceof NodeList){
@@ -63,6 +66,9 @@ function Accordian({data,index,contentBox,arrow} : {data : {name : string, path:
                     <div className="sb-catgArrow"><IoIosArrowUp/></div>
                 </div>
                 <div className="sb-catgContentBox">
+                    {data.dropdownMenu.map((data,index)=>{
+                        return <div key={index} className="sb-catgContent"><span>{data}</span></div>
+                    })}
                 </div>
             </div>
 }
