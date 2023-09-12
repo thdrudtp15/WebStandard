@@ -20,6 +20,8 @@ function ScrollEvent(){
             let width = document.body.offsetWidth;
             if(width <= 768 && navWrapTag instanceof HTMLElement){
                 navWrapTag.classList.remove("nav-fold")   
+            }else if(width >= 768){
+                dispatch(onChnageSidebarStatus(""))
             }
         }
 

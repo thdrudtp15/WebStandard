@@ -4,23 +4,13 @@ import React,{useEffect} from "react"
 import { useDispatch,useSelector } from "react-redux";
 import { onchangeLoginStatus } from "../store";
 import { onChnageSidebarStatus } from "../store";
-
+import catgArr from "../data/navbarData";
 import {HiBars3} from "react-icons/hi2";
 
 function Navbar(){
 
     const dispatch = useDispatch();
     
-    
-
-    const catgArr = [
-        {name : "TAB" , path : "#tab" , dropdownMenu : ["TAB CONTENT1","TAB CONTENT2"]},
-        {name : "HOVER" , path : "#hover" , dropdownMenu : ["HOVER CONTENT1","HOVER CONTENT2"]},
-        {name : "ANIMATION" , path : "#animation" , dropdownMenu : ["ANI CONTENT1","ANI CONTENT2"]},
-    ]
-
-
-
     return <div className="nav-wrap">
             <div className="nav-logoBox">HOME</div>
             <div className="nav-catgBox">
