@@ -37,13 +37,13 @@ function Sticky1 (){
                     <div className="wordBox secondWord">
                         <span className="word">T</span>
                         <span className="word H">H</span>
-                        <span className="word">E</span>       
+                        <span className="word E2">E</span>       
                     </div>
                     <div className="wordBox thirdWord">
                         <span className="word">B</span>
-                        <span className="word">E</span>
+                        <span className="word E3">E</span>
                         <span className="word S">S</span>
-                        <span className="word">T</span>
+                        <span className="word T">T</span>
                     </div>
                 </div>
             </div>
@@ -64,15 +64,17 @@ function Sticky2 (){
         }
     }
 
-
-    let arr= [new SC("NEON","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/zEbDre6vGG.jpg"),new SC("CITY","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/a3jl6MaJhb.jpg"),new SC("LIGHT","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/uBqzFtFoMy.jpg"),new SC("ART","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/HvKrhWjk5S.jpg")];
+    let arr= [new SC("NEON","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/zEbDre6vGG.jpg"),
+              new SC("CITY","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/a3jl6MaJhb.jpg"),
+              new SC("LIGHT","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/uBqzFtFoMy.jpg"),
+              new SC("ART","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/HvKrhWjk5S.jpg")];
 
 
     return  <div className="sticky-secondWrap">
                 <div className="sticky-pointer secondPointer">
                     <div className="sticky-secondTextBox">
-                        <div className="sticky-secondHeader"><span>MAKE</span></div>
-                        <div className="sticky-secondExplanation">Explanation</div>
+                        <div className="sticky-secondHeader"><span>MAKE_._</span></div>
+                        <div className="sticky-secondExplanation">EXPLANATIONS</div>
                     </div>
                     <div className="sticky-slideBox">
                         {arr.map((data,index)=>{

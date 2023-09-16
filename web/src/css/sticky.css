@@ -75,6 +75,7 @@ position: relative;
 .wordBox {
     color: rgba(128, 128, 128, 0.5);
     letter-spacing: -20px;
+    position: relative;
 }
 .word { 
     /*반응형시 조절 해야 함*/
@@ -101,7 +102,7 @@ position: relative;
     top: 50px;
 }
 .H {
-    color: slateblue;
+    color: rgba(105, 90, 205, 0.671);
     position: relative;
     top: 20px;
 }
@@ -122,7 +123,6 @@ position: relative;
     overflow: hidden;
 }
 .sticky-slideBox{
-    /* width: 5200px; */
     width: fit-content;
     height: 550px;
     padding-left: 10%;
@@ -150,13 +150,16 @@ position: relative;
 .sticky-slideContent:hover img{
     transform: scale(1.1);
 }
+.sticky-slideContent:hover .sticky-slideTextBox{
+   color: white;
+}
 .sticky-secondTextBox{
     padding: 150px 0px 10px 10%;
 }
 .sticky-secondHeader{
-    font-size: 55px;
+    font-size: 95px;
     font-weight: 500;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .sticky-secondExplanation {
     font-size: 35px;
@@ -167,84 +170,47 @@ position: relative;
    left: 60%;
    top: 55%;
    z-index: 15;
-   color: white;
-   font-size: 66px;
+   color: rgba(255, 255, 255, 0.418);
+   font-size: 100px;
+   font-weight: 500;
+   transition: all 0.6s;
    /* background: red; */
 }
 
 
 
 @media screen and (max-width : 1700px){
-    /* .sticky-secondWrap {
-        height: 5500px;
-    }
-    .sticky-secondTextBox{
-        padding: 150px 0px 10px 10%;
-    }
-    .sticky-slideBox{
-        width: calc(950*4);
-        height: 470px;
-    }
-    
-    .sticky-slideContent{
-        width: 950px;
-    }  */
+   
 }
 
 @media screen and (max-width : 1200px) {
-    /* .sticky-secondWrap {
-        height: 5100px;
+    .sticky-secondWrap {
+        height: 3700px;
     }
-    .sticky-secondTextBox{
-        padding: 150px 0px 10px 10%;
-    }
-    .sticky-slideBox{
-        width: calc(850*4);
-        height: 470px;
-    }
-    
-    .sticky-slideContent{
-        width: 850px;
-    }  */
 }
 @media screen and (max-width : 992px) {
-    /* .sticky-secondWrap {
-        height: 3800px;
+    .sticky-secondWrap {
+        height: 3300px;
     }
-    .sticky-secondTextBox{
-        padding: 150px 0px 10px 10%;
-    }
-    .sticky-slideBox{
-        width: calc(700*4);
-        height: 400px;
-    }
-    
-    .sticky-slideContent{
-        width: 700px;
-    }  */
 }
 @media screen and (max-width : 768px) {
-    /* .sticky-secondWrap {
-        height: 3500px;
+    .sticky-secondWrap {
+        height: 3100px;
     }
-    .sticky-secondTextBox{
-        padding: 150px 0px 10px 10%;
+    .sticky-slideTextBox{
+        font-size: 60px;
     }
-    .sticky-slideBox{
-        width: calc(500*5);
-        height: 300px;
-    }
-    
-    .sticky-slideContent{
-        width: 500px; 
-    } */
 }
 @media screen and (max-width : 576px) {
     /*첫 번째 스티키 이벤트*/
-    /* .firstPointer {
+    .firstPointer {
         left: 0;
         padding-left: 30px;
         height: 700px;
+        display: none;
+    }
+    .sticky-noneBox {
+        width: 100%;
     }
     .sticky-header{
         font-size: 35px;
@@ -257,29 +223,36 @@ position: relative;
         height: 33.333%;
     }
     .word {
-        font-size: 500px;
+        font-size: 450px;
     }
+    /**/
     .E {
-        top: 100px;
-        right: 160px;
-    } */
+        right: 200px;
+        top: 140px;
+    }
+    .H {
+        position: absolute;
+        top: 40px;
+        left: 200px;
+    }
+    .E2 {
+        position: absolute;
+        left: 300px;
+        top: 200px;
+        z-index: -1;
+
+    }
+    /**/
     /*두 번째 스티키 이벤트*/
      .sticky-secondWrap {
         height: 2900px;
     }
-    .sticky-secondTextBox{
-        padding: 150px 0px 10px 10%;
-    }
-    /* .sticky-slideBox{
-        width: calc(380*4);
-        height: 250px;
-    } */
-    
     .sticky-slideContent{
         width: calc(100vw - 100px);
         border-radius: 40px;
     }
     .sticky-slideTextBox{
+        top : 70%;
         font-size: 35px;
     }
 }

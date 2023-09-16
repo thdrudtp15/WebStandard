@@ -20,11 +20,12 @@ function Sidebar(){
 
 
 
-
+    //사이드 바를 닫는 함수
     function closeSidebar(){
         dispatch(onChnageSidebarStatus(""))
         if(contentBox instanceof NodeList && arrow instanceof NodeList && catgBox instanceof NodeList){
             for(let i = 0; i < contentBox.length; i++){
+                    //이 부분을 통해 사이드 바의 상태를 초기화 한다.
                     contentBox[i].classList.remove("openCatg");
                     arrow[i].classList.remove("selectArrow");
                     catgBox[i].classList.remove("selectCatg");
@@ -32,8 +33,10 @@ function Sidebar(){
             }
         }        
     
+    //사이드 바를 눌렀을 때에 로그인 함수
     function onLogin(){
         dispatch(onChnageSidebarStatus(""))
+        //setTimeout을 이용해 사이드바가 들어간 후 모달창을 띄운다.
         const STO = setTimeout(()=>{
             dispatch(onchangeLoginStatus("login-wrapActivate"))
             clearTimeout(STO);

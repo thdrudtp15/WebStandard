@@ -35,21 +35,6 @@ function ScrollEvent(){
             }   
         }
 
-
-            // if(width > 1200 && width < 1700){
-            //     limitValue = -2950;     
-            // }else if (width < 1200 && width > 992){
-            //     limitValue = -2700;               
-            // }else if (width < 992 && width > 768){
-            //     limitValue = -2250;     
-            // }else if (width < 768 && width > 576){
-            //     limitValue = -1650;    
-            // }else if (width < 576){
-            //     limitValue = -1250;         
-            // }else {
-            //     limitValue = -3380;
-            // }
-
         function resizingEvent(){
             width = document.body.offsetWidth;
             if(width <= 768 && navWrapTag instanceof HTMLElement){
@@ -62,28 +47,9 @@ function ScrollEvent(){
                 if(width > 576){
                     limitValue = -slideBox.offsetWidth * 0.68;
                 }else {
-                    console.log("어느 장단..")
                     limitValue = -slideBox.offsetWidth * 0.73;
                 }   
             }
-    
-
-
-
-
-            // if(width > 1200 && width < 1700){
-            //     limitValue = -2950;     
-            // }else if (width < 1200 && width > 992){
-            //     limitValue = -2700;               
-            // }else if (width < 992 && width > 768){
-            //     limitValue = -2250;     
-            // }else if (width < 768 && width > 576){
-            //     limitValue = -1650;    
-            // }else if (width < 576){
-            //     limitValue = -1250;         
-            // }else {
-            //     limitValue = -3380;
-            // }
         }
 
 
