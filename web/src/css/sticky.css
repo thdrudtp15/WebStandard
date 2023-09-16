@@ -122,18 +122,20 @@ position: relative;
     overflow: hidden;
 }
 .sticky-slideBox{
-    width: 5200px;
+    /* width: 5200px; */
+    width: fit-content;
     height: 550px;
     padding-left: 10%;
     display: flex;
+    flex-wrap: nowrap;
 
-    /*임시*/
-    transform: translateX(-50px);
 }
 
 .sticky-slideContent{
     height: 100%;
-    width: 1300px;
+    /* width: 1300px; */
+    width: 70vw;
+    max-width: 1300px;
     border-radius: 60px;
     margin-right: 35px;
     position: relative;
@@ -173,7 +175,7 @@ position: relative;
 
 
 @media screen and (max-width : 1700px){
-    .sticky-secondWrap {
+    /* .sticky-secondWrap {
         height: 5500px;
     }
     .sticky-secondTextBox{
@@ -186,11 +188,11 @@ position: relative;
     
     .sticky-slideContent{
         width: 950px;
-    } 
+    }  */
 }
 
 @media screen and (max-width : 1200px) {
-    .sticky-secondWrap {
+    /* .sticky-secondWrap {
         height: 5100px;
     }
     .sticky-secondTextBox{
@@ -203,10 +205,10 @@ position: relative;
     
     .sticky-slideContent{
         width: 850px;
-    } 
+    }  */
 }
 @media screen and (max-width : 992px) {
-    .sticky-secondWrap {
+    /* .sticky-secondWrap {
         height: 3800px;
     }
     .sticky-secondTextBox{
@@ -219,10 +221,10 @@ position: relative;
     
     .sticky-slideContent{
         width: 700px;
-    } 
+    }  */
 }
 @media screen and (max-width : 768px) {
-    .sticky-secondWrap {
+    /* .sticky-secondWrap {
         height: 3500px;
     }
     .sticky-secondTextBox{
@@ -234,12 +236,12 @@ position: relative;
     }
     
     .sticky-slideContent{
-        width: 500px;
-    }
+        width: 500px; 
+    } */
 }
 @media screen and (max-width : 576px) {
     /*첫 번째 스티키 이벤트*/
-    .firstPointer {
+    /* .firstPointer {
         left: 0;
         padding-left: 30px;
         height: 700px;
@@ -260,21 +262,21 @@ position: relative;
     .E {
         top: 100px;
         right: 160px;
-    }
+    } */
     /*두 번째 스티키 이벤트*/
-    .sticky-secondWrap {
+     .sticky-secondWrap {
         height: 2900px;
     }
     .sticky-secondTextBox{
         padding: 150px 0px 10px 10%;
     }
-    .sticky-slideBox{
+    /* .sticky-slideBox{
         width: calc(380*4);
         height: 250px;
-    }
+    } */
     
     .sticky-slideContent{
-        width: 380px;
+        width: calc(100vw - 100px);
         border-radius: 40px;
     }
     .sticky-slideTextBox{

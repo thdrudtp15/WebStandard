@@ -20,25 +20,35 @@ function ScrollEvent(){
             const stickyImg = document.querySelector(".sticky-bgImg");
             const wordBox = document.querySelectorAll(".wordBox");
             const stickyFirstWrap = document.querySelector(".sticky-firstWrap");
+            const slideBox = document.querySelector(".sticky-slideBox");
 
             //==================가로형 스티키를 위한 부분
             const 태그 = document.querySelector(".sticky-secondWrap");
             const 세컨드포인터 = document.querySelector(".sticky-slideBox");
             //=========================================
             
-            if(width > 1200 && width < 1700){
-                limitValue = -2950;     
-            }else if (width < 1200 && width > 992){
-                limitValue = -2700;               
-            }else if (width < 992 && width > 768){
-                limitValue = -2250;     
-            }else if (width < 768 && width > 576){
-                limitValue = -1650;    
-            }else if (width < 576){
-                limitValue = -1250;         
+            if(slideBox instanceof HTMLElement){
+            if(width > 576){
+                limitValue = -slideBox.offsetWidth * 0.71;
             }else {
-                limitValue = -3380;
-            }
+                limitValue = -slideBox.offsetWidth * 0.73;
+            }   
+        }
+
+
+            // if(width > 1200 && width < 1700){
+            //     limitValue = -2950;     
+            // }else if (width < 1200 && width > 992){
+            //     limitValue = -2700;               
+            // }else if (width < 992 && width > 768){
+            //     limitValue = -2250;     
+            // }else if (width < 768 && width > 576){
+            //     limitValue = -1650;    
+            // }else if (width < 576){
+            //     limitValue = -1250;         
+            // }else {
+            //     limitValue = -3380;
+            // }
 
         function resizingEvent(){
             width = document.body.offsetWidth;
@@ -48,19 +58,32 @@ function ScrollEvent(){
                 dispatch(onChnageSidebarStatus(""))
             }
 
-            if(width > 1200 && width < 1700){
-                limitValue = -2950;     
-            }else if (width < 1200 && width > 992){
-                limitValue = -2700;               
-            }else if (width < 992 && width > 768){
-                limitValue = -2250;     
-            }else if (width < 768 && width > 576){
-                limitValue = -1650;    
-            }else if (width < 576){
-                limitValue = -1250;         
-            }else {
-                limitValue = -3380;
+            if(slideBox instanceof HTMLElement){
+                if(width > 576){
+                    limitValue = -slideBox.offsetWidth * 0.68;
+                }else {
+                    console.log("어느 장단..")
+                    limitValue = -slideBox.offsetWidth * 0.73;
+                }   
             }
+    
+
+
+
+
+            // if(width > 1200 && width < 1700){
+            //     limitValue = -2950;     
+            // }else if (width < 1200 && width > 992){
+            //     limitValue = -2700;               
+            // }else if (width < 992 && width > 768){
+            //     limitValue = -2250;     
+            // }else if (width < 768 && width > 576){
+            //     limitValue = -1650;    
+            // }else if (width < 576){
+            //     limitValue = -1250;         
+            // }else {
+            //     limitValue = -3380;
+            // }
         }
 
 
