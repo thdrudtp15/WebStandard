@@ -12,6 +12,7 @@ import ScrollEvent from './components/ScrollEvent';
 
 import sectionImg from "./Image/light.jpg";
 import Sidebar from './components/Sidebar';
+import Sticky from './components/Sticky';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <TabBtn/>
       <Section img={sectionImg} subject="SECTION TITLE" text="SECTION EXPLANATION" fontColor="white"/>
       <Hover />
+      <Sticky />
       <Footer />
       <ScrollEvent />
     </div>

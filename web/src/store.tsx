@@ -21,10 +21,13 @@ let sidebarStatus = createSlice({
 })
 
 
+
+
 export default configureStore({
   reducer: {
     loginStatus: loginStatus.reducer,
     sidebarStatus :sidebarStatus.reducer,
+    
   },
 });
 

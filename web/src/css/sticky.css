@@ -1,0 +1,283 @@
+
+
+.sticky-firstWrap {
+height: 2500px;
+background: transparent;
+position: relative;
+}
+
+.sticky-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: -200;
+}
+.sticky-bgImg { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+    color: white;
+}
+
+.img1 {
+    background: url("https://i.esdrop.com/d/f/2DJRPYKvvz/BcCHw1vUa0.jpg");
+    background-size: cover;
+
+}
+.img2 {
+    background: url("https://i.esdrop.com/d/f/2DJRPYKvvz/SxfZonpsIU.jpg");
+    background-size: cover;
+}
+.img3 {
+    background: url("https://i.esdrop.com/d/f/2DJRPYKvvz/qf0Nbr6Gjk.jpg");
+    background-size: cover;
+}
+
+
+.sticky-pointer {
+    position: sticky;
+}
+
+.firstPointer {
+    height: 1000px;
+    width: 400px;
+    padding-top: 150px;
+    top: 150px;
+    left: 200px;
+    bottom: 0;
+    color: white;
+    float: left;
+}
+
+
+.sticky-header{
+    font-size: 85px;
+    font-weight: 400;
+}
+.sticky-content {
+    font-size: 20px;
+}
+
+.sticky-noneBox {
+    position: absolute;
+    width: 60%;
+    height: 2500px;
+    padding-top: 200px;
+    padding-right: 200px;
+    /* background: blue; */
+    right: 0;
+    overflow: hidden;
+}
+
+
+.wordBox {
+    color: rgba(128, 128, 128, 0.5);
+    letter-spacing: -20px;
+}
+.word { 
+    /*반응형시 조절 해야 함*/
+    font-size: 400px;
+    font-weight: bold;
+}
+.firstWord {
+    text-align: left;
+}
+.secondWord {
+    text-align: right;
+}
+.thirdWord {
+    text-align: left;
+}
+
+.spotlight {
+    color : rgb(255, 255, 255) !important;
+}
+
+.E { 
+    color: rgba(0, 128, 128, 0.671);
+    position: relative;
+    top: 50px;
+}
+.H {
+    color: slateblue;
+    position: relative;
+    top: 20px;
+}
+.S {
+    color: darkblue;
+}
+
+
+/*=====================================================*/
+.sticky-secondWrap {
+    height: 5200px;
+}
+.secondPointer {
+    width: 100%;
+    height: 100vh;
+    background: rgb(15, 15, 15);
+    top: 0;
+    overflow: hidden;
+}
+.sticky-slideBox{
+    width: 5200px;
+    height: 550px;
+    padding-left: 10%;
+    display: flex;
+
+    /*임시*/
+    transform: translateX(-50px);
+}
+
+.sticky-slideContent{
+    height: 100%;
+    width: 1300px;
+    border-radius: 60px;
+    margin-right: 35px;
+    position: relative;
+    overflow: hidden;
+}
+.sticky-slideContent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.6s;
+}
+.sticky-slideContent:hover img{
+    transform: scale(1.1);
+}
+.sticky-secondTextBox{
+    padding: 150px 0px 10px 10%;
+}
+.sticky-secondHeader{
+    font-size: 55px;
+    font-weight: 500;
+    color: white;
+}
+.sticky-secondExplanation {
+    font-size: 35px;
+    color: gray;
+}
+.sticky-slideTextBox {
+   position: absolute;
+   left: 60%;
+   top: 55%;
+   z-index: 15;
+   color: white;
+   font-size: 66px;
+   /* background: red; */
+}
+
+
+
+@media screen and (max-width : 1700px){
+    .sticky-secondWrap {
+        height: 5500px;
+    }
+    .sticky-secondTextBox{
+        padding: 150px 0px 10px 10%;
+    }
+    .sticky-slideBox{
+        width: calc(950*4);
+        height: 470px;
+    }
+    
+    .sticky-slideContent{
+        width: 950px;
+    } 
+}
+
+@media screen and (max-width : 1200px) {
+    .sticky-secondWrap {
+        height: 5100px;
+    }
+    .sticky-secondTextBox{
+        padding: 150px 0px 10px 10%;
+    }
+    .sticky-slideBox{
+        width: calc(850*4);
+        height: 470px;
+    }
+    
+    .sticky-slideContent{
+        width: 850px;
+    } 
+}
+@media screen and (max-width : 992px) {
+    .sticky-secondWrap {
+        height: 3800px;
+    }
+    .sticky-secondTextBox{
+        padding: 150px 0px 10px 10%;
+    }
+    .sticky-slideBox{
+        width: calc(700*4);
+        height: 400px;
+    }
+    
+    .sticky-slideContent{
+        width: 700px;
+    } 
+}
+@media screen and (max-width : 768px) {
+    .sticky-secondWrap {
+        height: 3500px;
+    }
+    .sticky-secondTextBox{
+        padding: 150px 0px 10px 10%;
+    }
+    .sticky-slideBox{
+        width: calc(500*5);
+        height: 300px;
+    }
+    
+    .sticky-slideContent{
+        width: 500px;
+    }
+}
+@media screen and (max-width : 576px) {
+    /*첫 번째 스티키 이벤트*/
+    .firstPointer {
+        left: 0;
+        padding-left: 30px;
+        height: 700px;
+    }
+    .sticky-header{
+        font-size: 35px;
+        font-weight: 400;
+    }
+    .sticky-content {
+        font-size: 15px;
+    }
+    .wordBox {
+        height: 33.333%;
+    }
+    .word {
+        font-size: 500px;
+    }
+    .E {
+        top: 100px;
+        right: 160px;
+    }
+    /*두 번째 스티키 이벤트*/
+    .sticky-secondWrap {
+        height: 2900px;
+    }
+    .sticky-secondTextBox{
+        padding: 150px 0px 10px 10%;
+    }
+    .sticky-slideBox{
+        width: calc(380*4);
+        height: 250px;
+    }
+    
+    .sticky-slideContent{
+        width: 380px;
+        border-radius: 40px;
+    }
+    .sticky-slideTextBox{
+        font-size: 35px;
+    }
+}
