@@ -3,12 +3,13 @@ import './App.css';
 
 import ImgSlide from './components/ImgSlide';
 import TabBtn from './components/TabBtn';
-import Hover from './components/Hover';
+import Overlay from './components/Overlay';
 import Section from './components/Section';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
 import ScrollEvent from './components/ScrollEvent';
+import Swipe from './components/Swipe';
 
 import sectionImg from "./Image/light.jpg";
 import Sidebar from './components/Sidebar';
@@ -24,8 +25,9 @@ function App() {
       <ImgSlide />
       <TabBtn/>
       <Section img={sectionImg} subject="SECTION TITLE" text="SECTION EXPLANATION" fontColor="white"/>
-      <Hover />
-      <Sticky />
+      <Overlay />
+      {/* <Sticky /> */}
+      <Swipe />
       <Footer />
       <ScrollEvent />
     </div>

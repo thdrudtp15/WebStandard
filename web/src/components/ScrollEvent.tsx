@@ -58,12 +58,12 @@ function ScrollEvent(){
             let scroll = window.scrollY; //내가 내린 수치
             let view = window.innerHeight; //보여지는 화면의 크기
             let height =document.body.scrollHeight;//전체 화면의 높이
-            let width = document.body.offsetWidth;
+            let width1 = document.body.offsetWidth;
             let percent = scroll / (height - view) * 100;
-            
+           
                 if(navWrapTag instanceof HTMLElement && stickyImg instanceof HTMLElement && wordBox instanceof NodeList && stickyFirstWrap instanceof HTMLElement && 태그 instanceof HTMLElement) {
                             
-                    if(percent > 3 && width > 768) {
+                    if(percent > 3 && width1 > 768) {
                         navWrapTag.classList.add("nav-fold")
                     }else{
                         navWrapTag.classList.remove("nav-fold")

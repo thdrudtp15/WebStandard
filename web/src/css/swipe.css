@@ -1,0 +1,43 @@
+.swipe-wrap {
+   padding: 70px 0px;
+}
+.swipe-cWrap {
+    /* padding-left: 18%; */
+}
+
+.swipe-progressBox{
+    width: 100%;
+    padding: 0px 18%;
+}
+.swipe-progress {
+    width: 100%;
+    height: 1px;
+    background: gray;
+}
+
+.swipe-content {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* background: red; */
+}
+.swipe-box {
+    width: fit-content;
+    height: 380px;
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 18%;
+    cursor: pointer;
+}
+
+.swipe-card {
+    height: 100%;
+    width: 300px;
+    border-right: 1px solid silver;
+    padding-left: 40px;
+}
+.swipe-cardNum {
+    font-size: 60px;
+    color: rgb(104, 104, 243);
+    font-weight: bold;
+}
