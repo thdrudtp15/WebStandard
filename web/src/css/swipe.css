@@ -16,9 +16,11 @@
 }
 
 .swipe-content {
-    width: 100%;
+    width: 82%;
+    margin-left: auto;
     position: relative;
     overflow: hidden;
+    /* margin-left: 18%; */
     /* background: red; */
 }
 .swipe-box {
@@ -26,15 +28,17 @@
     height: 380px;
     display: flex;
     margin-bottom: 30px;
-    margin-left: 18%;
     cursor: pointer;
+}
+.swipe-transition {
+    transition-duration: 1000ms;
 }
 
 .swipe-card {
     height: 100%;
     width: 300px;
     border-right: 1px solid silver;
-    padding-left: 40px;
+    margin-right: 40px;
 }
 .swipe-cardNum {
     font-size: 60px;
