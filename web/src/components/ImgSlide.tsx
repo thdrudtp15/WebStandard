@@ -17,7 +17,7 @@ function Banner() {
     //조금 더 간편한 이미지 유지보수를 위해 해당 방법으로 제작했습니다.
     //==============================
     let [imgArr,setImgArr] = useState([ {main : "TITLE", sub : "explanation explanation explanation explanation explanation explanation " ,image : city, },                                  
-                                        {main : "큰 제목입니다3", sub : "설명입니다. 설명입니다. 설명입니다.", image : beach}
+                                        {main : "TITLE2", sub : "explanation explanation explanation explanation explanation explanation ", image : beach}
                                     ]);
     let [nowPage, setNowPage]  = useState(0);
     let [firstRendering , setFirstRendering] = useState(true);

@@ -17,11 +17,16 @@ function ScrollEvent(){
     console.log(limitValue,"df");
     useEffect(()=>{
             const navWrapTag = document.querySelector(".nav-wrap");
-            const stickyImg = document.querySelector(".sticky-bgImg");
             const wordBox = document.querySelectorAll(".wordBox");
-            const stickyFirstWrap = document.querySelector(".sticky-firstWrap");
             const slideBox = document.querySelector(".sticky-slideBox");
 
+
+            //==============Sticky1의 활성화를 위해 필요한 부분====================
+            //const stickyImg = document.querySelector(".sticky-bgImg");
+            //const stickyFirstWrap = document.querySelector(".sticky-firstWrap");
+            //===================================================================
+            
+            
             //==================가로형 스티키를 위한 부분
             const 태그 = document.querySelector(".sticky-secondWrap");
             const 세컨드포인터 = document.querySelector(".sticky-slideBox");
@@ -43,6 +48,7 @@ function ScrollEvent(){
                 dispatch(onChnageSidebarStatus(""))
             }
 
+            //Sticky2의 limit조정 부분
             if(slideBox instanceof HTMLElement){
                 if(width > 576){
                     limitValue = -slideBox.offsetWidth * 0.68;
@@ -61,8 +67,14 @@ function ScrollEvent(){
             let width1 = document.body.offsetWidth;
             let percent = scroll / (height - view) * 100;
            
-                if(navWrapTag instanceof HTMLElement && stickyImg instanceof HTMLElement && wordBox instanceof NodeList && stickyFirstWrap instanceof HTMLElement && 태그 instanceof HTMLElement) {
-                            
+                if(navWrapTag instanceof HTMLElement && 태그 instanceof HTMLElement) {
+                    //========Sticky1활성화를 위해 필요한 부분======
+                    //stickyImg instanceof HTMLElement && wordBox instanceof NodeList && stickyFirstWrap instanceof HTMLElement
+                    //============================================     
+
+
+
+                    //nav-bar
                     if(percent > 3 && width1 > 768) {
                         navWrapTag.classList.add("nav-fold")
                     }else{
@@ -73,27 +85,27 @@ function ScrollEvent(){
                         wordBox[i].classList.remove("spotlight");
                     }
 
+                    //Sticky1
+                    // let sticky1Top =stickyFirstWrap.getBoundingClientRect().top;
+                    // if( sticky1Top < -500 && sticky1Top > -1000){
+                    //     stickyImg.classList.remove("img1");
+                    //     stickyImg.classList.remove("img3");
+                    //     stickyImg.classList.add("img2");
+                    //     wordBox[1].classList.add("spotlight");
+                    // }else if ( sticky1Top < -1000 ){
+                    //     stickyImg.classList.remove("img1")
+                    //     stickyImg.classList.remove("img2")
+                    //     stickyImg.classList.add("img3");
+                    //     wordBox[2].classList.add("spotlight");
+                    // } else {
+                    //     stickyImg.classList.remove("img2");
+                    //     stickyImg.classList.remove("img3");
+                    //     stickyImg.classList.add("img1");
+                    //     wordBox[0].classList.add("spotlight");
+                    // }
 
-                    let sticky1Top =stickyFirstWrap.getBoundingClientRect().top;
-                    if( sticky1Top < -500 && sticky1Top > -1000){
-                        stickyImg.classList.remove("img1");
-                        stickyImg.classList.remove("img3");
-                        stickyImg.classList.add("img2");
-                        wordBox[1].classList.add("spotlight");
-                    }else if ( sticky1Top < -1000 ){
-                        stickyImg.classList.remove("img1")
-                        stickyImg.classList.remove("img2")
-                        stickyImg.classList.add("img3");
-                        wordBox[2].classList.add("spotlight");
-                    } else {
-                        stickyImg.classList.remove("img2");
-                        stickyImg.classList.remove("img3");
-                        stickyImg.classList.add("img1");
-                        wordBox[0].classList.add("spotlight");
-                    }
 
-
-
+                    //Sticky2
                     if(태그 instanceof HTMLElement && 세컨드포인터 instanceof HTMLElement) {
                         let 태그위치 = 태그.getBoundingClientRect().top;
                         if(태그위치 > limitValue && 태그위치 < -50){

@@ -101,6 +101,7 @@
     color: white;
     font-weight: 600;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 .sb-loginIcon {
     position: relative;

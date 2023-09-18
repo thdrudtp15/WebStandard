@@ -1,21 +1,20 @@
 import "../css/sticky.css";
-
-
-
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
+import stickyData from "../data/stickyData";
+
+
 function Sticky() {
     return <div> 
-                <Sticky1 />
-                <Sticky2 />
-                <div style={{height :2000,background : "white"}}></div>
+                {/* <Sticky1 /> */}
+                <Sticky2 arr={stickyData} />
     </div>
 }
 
 export default Sticky;
 
-//정적 sticky
+//세로형 Sticky 비활성화
 function Sticky1 (){
     return <div className="sticky-firstWrap">
                 <div className="sticky-bg">
@@ -51,29 +50,12 @@ function Sticky1 (){
 
 }
 
-function Sticky2 (){
-
-    class SC {
-        name : string;
-        exp : string;
-        img : string;
-        constructor(n : string, e : string, i : string){
-            this.name = n;
-            this.exp = e;
-            this.img = i
-        }
-    }
-
-    let arr= [new SC("NEON","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/zEbDre6vGG.jpg"),
-              new SC("CITY","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/a3jl6MaJhb.jpg"),
-              new SC("LIGHT","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/uBqzFtFoMy.jpg"),
-              new SC("ART","설명","https://i.esdrop.com/d/f/2DJRPYKvvz/HvKrhWjk5S.jpg")];
-
-
-    return  <div className="sticky-secondWrap">
+function Sticky2 ({arr} : {arr :  { name : string, exp:string, img:string }[] }){
+    return  <div className="sticky-secondWrap" id="sticky">
                 <div className="sticky-pointer secondPointer">
                     <div className="sticky-secondTextBox">
-                        <div className="sticky-secondHeader"><span>MAKE_._</span></div>
+                    <div className="template-subject subject-custom">STICKY</div>
+                        <div className="sticky-secondHeader"><span>_TITLE</span></div>
                         <div className="sticky-secondExplanation">EXPLANATIONS</div>
                     </div>
                     <div className="sticky-slideBox">

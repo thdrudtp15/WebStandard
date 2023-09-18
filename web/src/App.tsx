@@ -26,7 +26,7 @@ function App() {
       <TabBtn/>
       <Section img={sectionImg} subject="SECTION TITLE" text="SECTION EXPLANATION" fontColor="white"/>
       <Overlay />
-      {/* <Sticky /> */}
+      <Sticky />
       <Swipe />
       <Footer />
       <ScrollEvent />

@@ -9,10 +9,18 @@
     width: 100%;
     padding: 0px 18%;
 }
-.swipe-progress {
+.swipe-progressBar {
     width: 100%;
-    height: 1px;
-    background: gray;
+    height: 4px;
+    background: rgba(128, 128, 128, 0.37);
+    position: relative;
+}
+.swipe-progress {
+    position: absolute;
+    height: 4px;
+    width: 25%;
+    background: rgb(104, 104, 243);
+    transition: all 1s;
 }
 
 .swipe-content {
@@ -39,9 +47,64 @@
     width: 300px;
     border-right: 1px solid silver;
     margin-right: 40px;
+    padding-right: 40px;
+    /* background: green; */
+    display: flex;
+    flex-direction: column;
+}
+.swipe-card:last-child {
+    border: none;
 }
 .swipe-cardNum {
     font-size: 60px;
     color: rgb(104, 104, 243);
     font-weight: bold;
+    /* background: red; */
+    margin-bottom: 20px;
+}
+.swipe-cardTitle {
+    height: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 23px;
+    font-weight: bold;
+}
+.swipe-cardImg {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    border-radius: 20px;
+    background: blue;
+    overflow: hidden;
+}
+.swipe-cardImg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+@media screen and (max-width : 1700px){ 
+}
+@media screen and (max-width : 1200px) {
+   
+}
+@media screen and (max-width : 992px) {
+   
+}
+@media screen and (max-width : 768px) {
+    
+}
+@media screen and (max-width : 576px) {
+    .swipe-progressBox{
+        width: 100%;
+        padding: 0px 12%;
+    }
+    .swipe-content {
+        width: 100%;
+        padding-left: 18%;
+    }
 }

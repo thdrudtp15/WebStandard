@@ -124,7 +124,7 @@ position: relative;
 }
 .sticky-slideBox{
     width: fit-content;
-    height: 550px;
+    height: 60vh;
     padding-left: 10%;
     display: flex;
     flex-wrap: nowrap;
@@ -154,16 +154,26 @@ position: relative;
    color: white;
 }
 .sticky-secondTextBox{
-    padding: 150px 0px 10px 10%;
+    /* padding: 150px 0px 10px 10%; */
 }
+
+.subject-custom {
+    color: white;
+    padding: 70px 18% 0px 18%;
+}
+
+
 .sticky-secondHeader{
     font-size: 95px;
     font-weight: 500;
     color: rgb(255, 255, 255);
+    padding-left: 10%;
 }
 .sticky-secondExplanation {
     font-size: 35px;
     color: gray;
+    padding-left: 10%;
+    margin-bottom: 10px;
 }
 .sticky-slideTextBox {
    position: absolute;
@@ -244,6 +254,14 @@ position: relative;
     }
     /**/
     /*두 번째 스티키 이벤트*/
+    .sticky-secondHeader{
+        margin-top: 30px;
+        font-size: 60px;
+        font-weight: 500;
+    }
+    .sticky-secondExplanation {
+        font-size: 25px;
+    }
      .sticky-secondWrap {
         height: 2900px;
     }

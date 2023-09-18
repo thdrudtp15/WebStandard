@@ -15,9 +15,9 @@ class Catg {
 
 const catgArr = [
     new Catg("TAB","#tab",["TAB CONTETN1","TAB CONTETN2"]),
-    new Catg("HOVER","#hover",["HOVER CONTETN1","HOVER CONTETN2"]),
-    new Catg("ANIMATION","#ani",["ANI CONTETN1","ANI CONTETN2"]),
-    new Catg("CLICK","#click",["ANI CONTETN1","ANI CONTETN2","ANI CONTENT3"]),
+    new Catg("OVERLAY","#overlay",["OVERLAY CONTETN1","OVERLAY CONTETN2"]),
+    new Catg("STICKY","#sticky",["STICKY CONTETN1","STICKY CONTETN2"]),
+    new Catg("SWIPE","#swipe",["SWIPE CONTETN1","SWIPE CONTETN2","SWIPE CONTENT3"]),
 ]
 
 export default catgArr;
