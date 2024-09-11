@@ -46,7 +46,7 @@
 
 📅제작 기간 : 약 10일
 
-📢현재 상태 : https://thdrudtp15.github.io/
+📢현재 상태 : [https://thdrudtp15.github.io/](https://thdrudtp15.github.io/featuresetHosting/)
 
 
 😥아쉬운 점 : 정적 파일 및 데이터를 이용한 바인딩, 모바일 환경에서의 버그, 진부한 디자인, 두서 없는 데이터의 주제 세로형 스티키 이벤트가 존재하나 완성도 부족으로 주석처리하게 된 점
